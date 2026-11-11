@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Victoria Bonfim · Talent Acquisition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Clean light page, single theme. Layout: one centered column, thin rules, quiet two-column grids */
+  --bg: #fbfbf9;
+  --surface: #ffffff;
+  --ink: #1b1d1a;
+  --muted: #61665e;
+  --line: #e4e6e0;
+  --accent: #55693d;
+  --accent-soft: #eef1e8;
+  --display: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; background: var(--bg); }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16.5px; line-height: 1.65; }
+.wrap { max-width: 920px; margin: 0 auto; padding: 72px 24px 64px; display: flex; flex-direction: column; gap: 80px; }
+h1, h2, h3 { margin: 0; text-wrap: balance; font-weight: 400; }
+h1 { font-family: var(--display); font-size: clamp(3rem, 7vw, 4.4rem); line-height: 1; letter-spacing: -0.01em; }
+h2 { font-family: var(--display); font-size: clamp(1.9rem, 4vw, 2.4rem); line-height: 1.1; }
+h3 { font-size: 1.02rem; font-weight: 600; line-height: 1.35; }
+p { margin: 0; max-width: 64ch; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+/* Hero */
+header { display: flex; flex-direction: column; gap: 20px; }
+.role { font-family: var(--display); font-style: italic; font-size: 1.5rem; color: var(--accent); line-height: 1.2; }
+.lede { font-size: 1.1rem; max-width: 62ch; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.chip { font-size: .84rem; padding: 5px 13px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); background: var(--surface); }
+
+/* Section heads */
+section { display: flex; flex-direction: column; gap: 28px; }
+.head { display: flex; flex-direction: column; gap: 8px; padding-top: 28px; border-top: 1px solid var(--ink); }
+.kicker { font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+
+/* Fit list */
+.fit { display: flex; flex-direction: column; }
+.fit-row { display: grid; grid-template-columns: 260px 1fr; gap: 32px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.fit-row:first-child { padding-top: 4px; }
+.fit-row .req { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.fit-row p { color: var(--muted); }
+.tag { font-size: .7rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 2px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+.tag.plus { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+
+/* Projects grid */
+.projects { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.project { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 26px; display: flex; flex-direction: column; gap: 12px; }
+.project .sub { font-size: .86rem; color: var(--accent); font-weight: 500; }
+.project p { color: var(--muted); font-size: .96rem; }
+.project ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 7px; font-size: .95rem; }
+.project li::marker { color: var(--accent); }
+
+/* Timeline */
+.timeline { display: flex; flex-direction: column; }
+.stop { display: grid; grid-template-columns: 260px 1fr; gap: 32px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.stop:first-child { padding-top: 4px; }
+.stop .when { display: flex; flex-direction: column; gap: 2px; font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.stop .when strong { color: var(--ink); font-weight: 600; font-size: 1rem; }
+.stop .what { display: flex; flex-direction: column; gap: 4px; }
+.stop .what p { color: var(--muted); }
+
+/* Principles */
+.how { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.how div { display: flex; flex-direction: column; gap: 8px; padding-top: 14px; border-top: 2px solid var(--accent); }
+.how p { color: var(--muted); font-size: .95rem; }
+
+.tools { display: flex; flex-wrap: wrap; gap: 8px; }
+
+footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; }
+footer a { font-weight: 500; }
+
+@media (max-width: 720px) {
+  .wrap { padding-top: 48px; gap: 60px; }
+  .fit-row, .stop { grid-template-columns: 1fr; gap: 8px; }
+  .projects, .how { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <header>
+    <h1>Victoria Bonfim</h1>
+    <div class="role">Talent Acquisition &amp; People Partner</div>
+    <p class="lede">I have worked in recruiting since 2019 and have run full-cycle processes since 2021, first hiring tech talent for a global consultancy and now as People Business Partner at Tegrus. Most of my work today is hiring for roles that are hard to find in Brazil: RevOps, CRM and Growth specialists, and the leaders who manage them. I also build the processes and tools behind the hiring, including AI-assisted screening and a recruiting platform I designed myself.</p>
+    <div class="meta">
+      <span class="chip">Vitória, Brazil · Remote</span>
+      <span class="chip">English · Portuguese</span>
+      <span class="chip">Full-cycle recruiting</span>
+      <span class="chip">RevOps, Growth &amp; CRM talent</span>
+    </div>
+  </header>
+
+  <section aria-labelledby="fit-title">
+    <div class="head">
+      <span class="kicker">For the Talent Acquisition Specialist role at Globalfy</span>
+      <h2 id="fit-title">How my experience matches what you're looking for</h2>
+    </div>
+    <div class="fit">
+      <div class="fit-row">
+        <div class="req"><span class="tag">Requirement</span><h3>5+ years of full-cycle recruiting</h3></div>
+        <p>I have run processes from start to finish since 2021. At Keyrus, I owned the full cycle for Big Data and Analytics roles: aligning the profile with the client, hunting, interviews, reports and client follow-up. At Fitz, the recruiting arm of Tegrus, I coordinate RPO and talent-as-a-service projects, from intake and job briefing to offer and feedback to every candidate.</p>
+      </div>
+      <div class="fit-row">
+        <div class="req"><span class="tag">Requirement</span><h3>Senior and hard-to-fill roles</h3></div>
+        <p>I specialize in a niche market (RevOps, CRM and Growth), where strong profiles are scarce and rarely apply to job posts. I have run searches for leadership roles such as Inside Sales Leader and Senior People Business Partner, and for technical roles such as a CRM Analyst for a HubSpot implementation.</p>
+      </div>
+      <div class="fit-row">
+        <div class="req"><span class="tag">Requirement</span><h3>Partnering with leadership and hiring managers</h3></div>
+        <p>I run kickoff meetings with client leaders, turn them into structured job briefs, and deliver executive candidate reports written for the final decision-maker. Inside Tegrus, I built and lead the People function, working directly with the founders and area heads.</p>
+      </div>
+      <div class="fit-row">
+        <div class="req"><span class="tag">Requirement</span><h3>ATS and sourcing tools, including LinkedIn Recruiter</h3></div>
+        <p>Hands-on with LinkedIn Recruiter, Gupy, Sólides, Teamtailor and PandaPé. I source daily on LinkedIn, and when the usual channels run dry I go to where the talent actually is: professional communities, Discord and Telegram groups, and referrals.</p>
+      </div>
+      <div class="fit-row">
+        <div class="req"><span class="tag">Requirement</span><h3>Improving the hiring process</h3></div>
+        <p>I structured recruiting at Tegrus from scratch and later designed a custom recruiting and people platform to replace spreadsheets, with job openings, candidates, applications and a public application page.</p>
+      </div>
+      <div class="fit-row">
+        <div class="req"><span class="tag plus">Nice to have</span><h3>AI-assisted sourcing and screening</h3></div>
+        <p>I built AI workflows that turn interview transcripts, CVs and behavioral assessments into structured, evidence-based candidate reports, and calibrated them until the output matched how a senior recruiter would write.</p>
+      </div>
+      <div class="fit-row">
+        <div class="req"><span class="tag plus">Nice to have</span><h3>Startup and high-growth environments</h3></div>
+        <p>Tegrus is a growing Brazilian RevOps and CRM consultancy. I built its People function, onboarding program and development plans while the company was scaling.</p>
+      </div>
+      <div class="fit-row">
+        <div class="req"><span class="tag plus">Plus</span><h3>International exposure</h3></div>
+        <p>At Keyrus, a global data and consulting firm, I worked alongside colleagues from different countries and cultures. My English is advanced, written and spoken.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="work-title">
+    <div class="head">
+      <span class="kicker">Selected work</span>
+      <h2 id="work-title">What I've built</h2>
+    </div>
+    <div class="projects">
+      <article class="project">
+        <h3>Fitz recruiting operation</h3>
+        <span class="sub">RPO &amp; Talent as a Service</span>
+        <p>I coordinate the operation with a dedicated recruiter, and we set it up to scale.</p>
+        <ul>
+          <li>Defined the ideal candidate profiles for RevOps, CRM and Growth roles, and built a shared knowledge base for the team.</li>
+          <li>Standardized the job briefing step, so every search starts from a clear brief agreed with the client.</li>
+          <li>Wrote job posts that are short, practical and specific.</li>
+        </ul>
+      </article>
+      <article class="project">
+        <h3>AI-assisted screening</h3>
+        <span class="sub">Interview analysis &amp; executive reports</span>
+        <p>Two connected AI workflows for candidate evaluation.</p>
+        <ul>
+          <li>An interview report that compares what the candidate said with the job requirements and ends with a clear recommendation.</li>
+          <li>An executive report for hiring managers, built on the interview report, the CV and the behavioral assessment.</li>
+          <li>Rules rewritten after testing to remove generic HR language and unsupported claims, so the reports stick to evidence.</li>
+        </ul>
+      </article>
+      <article class="project">
+        <h3>Recruiting &amp; people platform</h3>
+        <span class="sub">Designed and built in-house</span>
+        <p>After years of using paid ATS and HR tools that always missed something, I designed the platform we needed and built it with AI coding tools.</p>
+        <ul>
+          <li>Recruiting module with companies, job openings, candidates and applications, plus a public application page.</li>
+          <li>Employee records with full change history and role-based access, so managers see only their own teams.</li>
+        </ul>
+      </article>
+      <article class="project">
+        <h3>People function at Tegrus</h3>
+        <span class="sub">Built from scratch</span>
+        <ul>
+          <li>A 30-day onboarding program in three modules (culture, business and governance), with facilitation scripts and e-learning content.</li>
+          <li>Individual development plans for the entire operations team, with competency radars and a people-risk dashboard.</li>
+          <li>A people database and a cost comparison of Brazilian hiring models (CLT and PJ).</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="exp-title">
+    <div class="head">
+      <span class="kicker">Experience &amp; education</span>
+      <h2 id="exp-title">Career so far</h2>
+    </div>
+    <div class="timeline">
+      <div class="stop">
+        <div class="when"><strong>Tegrus · Fitz</strong>05/2022 – present</div>
+        <div class="what"><h3>People Business Partner</h3><p>Started as Talent Acquisition &amp; People Analyst, owning the full recruiting cycle from attraction to onboarding. Built and now lead the People function, and coordinate Fitz, the company's RPO and talent-as-a-service recruiting arm.</p></div>
+      </div>
+      <div class="stop">
+        <div class="when"><strong>Keyrus</strong>06/2021 – 05/2022</div>
+        <div class="what"><h3>Talent Acquisition Analyst</h3><p>Full-cycle recruiting for Big Data and Analytics professionals at a global consultancy, from client alignment and hunting to reports, client follow-up and recruiting metrics.</p></div>
+      </div>
+      <div class="stop">
+        <div class="when"><strong>Spassu · PartnerRH</strong>06/2019 – 06/2021</div>
+        <div class="what"><h3>HR Psychology Intern</h3><p>Sourcing and screening for tech roles, interviews, psychological assessments, candidate profiles and reports.</p></div>
+      </div>
+      <div class="stop">
+        <div class="when"><strong>Education</strong></div>
+        <div class="what"><p>Bachelor's degree in Psychology, Faculdade Multivix (2022). Technical degree in Computer Networks (2015).</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="how-title">
+    <div class="head">
+      <span class="kicker">How I work</span>
+      <h2 id="how-title">What hiring managers can expect</h2>
+    </div>
+    <div class="how">
+      <div><h3>Clear brief first</h3><p>I don't start sourcing until the hiring manager and I agree on what success in the role looks like.</p></div>
+      <div><h3>Evidence over impressions</h3><p>My reports separate what a candidate showed from what I'm inferring, so decisions are easier to defend.</p></div>
+      <div><h3>Respect for candidates</h3><p>Every candidate hears back. A good process leaves people who weren't hired with a good impression of the company.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="tools-title">
+    <div class="head">
+      <span class="kicker">Toolkit</span>
+      <h2 id="tools-title">Tools I use</h2>
+    </div>
+    <div class="tools">
+      <span class="chip">LinkedIn Recruiter</span>
+      <span class="chip">Gupy</span>
+      <span class="chip">Sólides</span>
+      <span class="chip">Teamtailor</span>
+      <span class="chip">PandaPé</span>
+      <span class="chip">Behavioral assessments (Mindsight)</span>
+      <span class="chip">Claude &amp; Gemini</span>
+      <span class="chip">Excel &amp; Google Sheets</span>
+      <span class="chip">Power BI (basic)</span>
+      <span class="chip">Google Workspace</span>
+      <span class="chip">ClickUp</span>
+    </div>
+  </section>
+
+  <footer>
+    <span>Based in Vitória, Brazil · Available for US business hours (Eastern Time)</span>
+    <a href="mailto:victoria.bonfim@outlook.com">victoria.bonfim@outlook.com</a>
+  </footer>
+
+</main>
+</body>
+</html>
